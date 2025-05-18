@@ -33,7 +33,7 @@ export default function Index({ auth, livres, filtres }) {
                         <div className="p-6 text-gray-900 dark:text-gray-100">
                             {/* Titre et bouton Ajouter */}
                             <div className="d-flex justify-content-between align-items-center mb-4">
-                                <h3 className="fs-5">Liste des Livres</h3>
+                                <h3 className="fs-5 text-black">Liste des Livres</h3>
                                 <Link href={route('livres.create')} className="btn btn-primary btn-sm">
                                     Ajouter un Livre
                                 </Link>

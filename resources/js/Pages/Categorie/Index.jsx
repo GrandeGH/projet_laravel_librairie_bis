@@ -20,7 +20,7 @@ export default function Index({ auth, categories }) { // 'auth' et 'categories' 
     return (
         <AuthenticatedLayout
             user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Gestion des Categories</h2>}
+            header={<h2 className="font-semibold text-xl text-black dark:text-gray-200 leading-tight">Gestion des Categories</h2>}
         >
             <Head title="Categories" />
 
@@ -29,7 +29,7 @@ export default function Index({ auth, categories }) { // 'auth' et 'categories' 
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
                             <div className="d-flex justify-content-between align-items-center mb-4">
-                                <h3 className="fs-5">Liste des Categories</h3>
+                                <h3 className="fs-5 text-black">Liste des Categories</h3>
                                 <Link href={route('categories.create')} className="btn btn-primary btn-sm">
                                     Ajouter une catégorie
                                 </Link>

@@ -10,9 +10,7 @@ use Inertia\Inertia; // Important pour Inertia
 
 class CategorieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         // récupère tous les categories, triés par nom
@@ -21,17 +19,11 @@ class CategorieController extends Controller
         return Inertia::render('Categorie/Index', ['categories'=>$categories,]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return Inertia::render('Categorie/Create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         // valider le sdonnées reçu du formulaire
@@ -47,17 +39,12 @@ class CategorieController extends Controller
         return redirect()->route('categories.index')->with('success', 'Categorie ajouté avec succès !');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Categorie $categorie)
     {
 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Categorie $categorie)
     {
         return Inertia::render('Categorie/Edit', [
@@ -66,9 +53,6 @@ class CategorieController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateCategorieRequest $request, Categorie $categorie)
     {
         $validatedData=$request->validate([
@@ -84,9 +68,6 @@ class CategorieController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Categorie $categorie)
     {
         if ($categorie->categories()->exists()) {
